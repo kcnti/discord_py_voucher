@@ -1,3 +1,9 @@
+#
+#   gh : https://github.com/kcnti/
+#   fb : https://www.facebook.com/earthktnn/
+#
+
+
 import discord
 import requests
 import json
@@ -14,7 +20,7 @@ async def on_ready():
 
 @bot.commands()
 async def topup(ctx, voucher):
-    
+
     phone_num = ""
 
     ################
