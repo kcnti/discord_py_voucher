@@ -14,7 +14,10 @@ async def on_ready():
 
 @bot.commands()
 async def topup(ctx, voucher):
+    
     phone_num = ""
+
+    ################
 
     voucher_hash = voucher.split('=')[-1]
     header = {
@@ -25,6 +28,9 @@ async def topup(ctx, voucher):
         "voucher_hash": voucher_hash 
     }
     url = "https://gift.truemoney.com/campaign/vouchers" + voucher_hash + "/redeem"
+
+    #################
+
     try:
         r = requests.post(url, data=json.dumps(data), headers=header)
         _json = r.json()
